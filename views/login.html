@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pingolão</title>
+    <title>Pingolão - Login</title>
     <link rel="stylesheet" href="../public/styles/telasIniciais.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,24 +16,26 @@
         </div>
         <div id="down">
             <form>
-    
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome">
-    
                 <label for="email">Email:</label>
-                <input type="text" name="email">
+                <input type="text" name="email" placeholder="Digite seu email">
     
                 <label for="senha">Senha:</label>
-                <input type="text" name="senha">
+                <input type="password" name="senha" placeholder="Digite sua senha">
     
-                <button>Cadastrar</button>
+                <button onclick="login()">Entrar</button>
             </form>
-            
+
             <button onclick="window.location.href='index.html'" class="voltar">Voltar</button>
 
         </div>
         <img src="../public/images/pingolaoRemoveBg.png" alt="Pingolao">
         <h2>Ganhar aqui é o padrão!</h2>
     </div>
+    <script>
+        function login() {
+            alert("Nenhuma conta foi encontrada. Por favor, crie uma conta primeiro.")
+        }
+
+    </script>
 </body>
 </html>
