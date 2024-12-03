@@ -88,3 +88,10 @@ p {
     height: 100px;
     width: 300px;
 }
+
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
