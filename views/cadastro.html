@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pingolão</title>
+    <title>Pingolão - Cadastro</title>
     <link rel="stylesheet" href="../public/styles/telasIniciais.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,25 +15,35 @@
             <h1>Jogo do Pingolão</h1>
         </div>
         <div id="down">
-            <form>
-    
+            <form id="cadastroForm">
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome">
+                <input type="text" name="nome" id="nome" required>
     
                 <label for="email">Email:</label>
-                <input type="text" name="email">
+                <input type="text" name="email" id="email" required>
     
                 <label for="senha">Senha:</label>
-                <input type="text" name="senha">
+                <input type="password" name="senha" id="senha" required>
     
-                <button>Cadastrar</button>
+                <button type="submit">Cadastrar</button>
             </form>
-            
-            <button onclick="window.location.href='index.html'" class="voltar">Voltar</button>
-
         </div>
         <img src="../public/images/pingolaoRemoveBg.png" alt="Pingolao">
         <h2>Ganhar aqui é o padrão!</h2>
     </div>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const saldoInicial = 0.00; 
+
+            localStorage.setItem('playerName', nome);
+            localStorage.setItem('playerBalance', saldoInicial.toFixed(2));
+
+            window.location.href = 'hub.html';
+        });
+    </script>
 </body>
 </html>
