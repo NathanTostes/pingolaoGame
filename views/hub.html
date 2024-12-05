@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pingolão - Hub</title>
+    <link rel="stylesheet" href="../public/styles/hub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <!-- <div class="title">
+            <h1>Jogo do Pingolão</h1>
+        </div> -->
+
+        <div id="welcome">
+            <p>Olá <span id="nomeJogador"></span>, você tem <span id="saldoJogador"></span> para gastar.</p>
+        </div>
+
+        <div id="buttons">
+            <button onclick="abrirModal()">Finanças</button>
+        </div>
+
+        <img src="../public/images/pingolaoRemoveBg.png" alt="Pingolao" id="pingola">
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Finanças</h2>
+            <form id="financasForm">
+                <label for="operacao">Operação:</label>
+                <select id="operacao">
+                    <option value="depositar">Depositar</option>
+                    <option value="sacar">Sacar</option>
+                </select>
+                <label for="valor">Valor:</label>
+                <select id="valor">
+                    <option value="10.00">R$ 10,00</option>
+                    <option value="50.00">R$ 50,00</option>
+                    <option value="100.00">R$ 100,00</option>
+                </select>
+                <button type="button" onclick="realizarTransacao()">Confirmar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../scripts/hub.js"></script>
+    
+    <style>
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            float: right;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
