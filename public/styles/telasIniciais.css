@@ -47,7 +47,7 @@ form>label{
     color: #e7dcdc;
 }
 
-form>button{
+button{
     background-color: rgb(236, 236, 236);
     font-size: 25px;
     margin-top: 10px;
@@ -56,20 +56,42 @@ form>button{
     transition: all, 0.5s;
 }
 
-form>button:hover{
+button:hover{
     background-color: rgb(180, 180, 180);
     border-radius: 20px;
 }
 
 img{
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     border-radius: 10px;
     margin: 30px 0px 30px 0px;
     transition: all, 0.5s;
 }
 
 img:hover {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
+}
+
+
+p {
+    font-size: 20px;
+    color: #e7dcdc;
+    margin: 20px 0;
+    max-width: 500px;
+}
+
+.direcionais{
+    margin: 10px;
+    margin-top: 100px;
+    height: 100px;
+    width: 300px;
+}
+
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
 }
