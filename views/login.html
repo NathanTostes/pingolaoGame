@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pingolão - Cadastro</title>
+    <title>Pingolão - Login</title>
     <link rel="stylesheet" href="../public/styles/telasIniciais.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,17 +15,14 @@
             <h1>Jogo do Pingolão</h1>
         </div>
         <div id="down">
-            <form id="cadastroForm">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" required>
-    
+            <form>
                 <label for="email">Email:</label>
-                <input type="text" name="email" id="email" required>
+                <input type="text" name="email" placeholder="Digite seu email">
     
                 <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha" required>
+                <input type="password" name="senha" placeholder="Digite sua senha">
     
-                <button type="submit">Cadastrar</button>
+                <button onclick="login()">Entrar</button>
             </form>
 
             <button onclick="window.location.href='index.html'" class="voltar">Voltar</button>
@@ -34,19 +31,11 @@
         <img src="../public/images/pingolaoRemoveBg.png" alt="Pingolao">
         <h2>Ganhar aqui é o padrão!</h2>
     </div>
-
     <script>
-        document.getElementById('cadastroForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nome = document.getElementById('nome').value;
-            const saldoInicial = 0.00; 
+        function login() {
+            alert("Nenhuma conta foi encontrada. Por favor, crie uma conta primeiro.")
+        }
 
-            localStorage.setItem('playerName', nome);
-            localStorage.setItem('playerBalance', saldoInicial.toFixed(2));
-
-            window.location.href = 'hub.html';
-        });
     </script>
 </body>
 </html>
