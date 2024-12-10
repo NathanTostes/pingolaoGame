@@ -6,12 +6,12 @@ window.onload = function() {
     document.getElementById('saldoJogador').textContent = playerBalance ? `${playerBalance} R$` : "0,00 R$";
 }
 
-function abrirModal() {
-    document.getElementById('modal').style.display = 'block';
+function abrirModal(modal) {
+    document.getElementById(modal).style.display = 'block';
 }
 
-function fecharModal() {
-    document.getElementById('modal').style.display = 'none';
+function fecharModal(modal) {
+    document.getElementById(modal).style.display = 'none';
 }
 
 function realizarTransacao() {
@@ -35,5 +35,5 @@ function realizarTransacao() {
     localStorage.setItem('playerBalance', saldoAtual.toFixed(2));
     document.getElementById('saldoJogador').textContent = `R$ ${saldoAtual.toFixed(2)}`;
 
-    fecharModal();
+    fecharModal('modalFinancas');
 }
