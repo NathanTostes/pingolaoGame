@@ -15,6 +15,8 @@ function playGame() {
     const resultElement = document.getElementById('result');
     const diceElement = document.getElementById('dice');
     const suspenseNumberElement = document.getElementById('suspenseNumber');
+    const buttonElement = document.getElementById('apostar')
+    buttonElement.disabled = true
 
     // Validações   
     if (isNaN(betAmount) || isNaN(guessNumber)) {
@@ -62,5 +64,8 @@ function playGame() {
             resultElement.textContent += ' Game Over! Seu saldo acabou.';
             document.querySelector('button').disabled = true;
         }
+
+        buttonElement.disabled = false
+
     }, 1000);
 }
