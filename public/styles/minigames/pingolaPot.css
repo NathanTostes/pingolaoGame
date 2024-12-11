@@ -25,6 +25,13 @@ p{
     color: #e7dcdc;
 }
 
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
+
 #container{
     height: 90vh;
     display: flex;
