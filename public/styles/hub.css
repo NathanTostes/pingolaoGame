@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #332c2c;
+}
+
+p{
+    color: #e7dcdc;
+    
+}
+
+#welcome{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+#welcome>p>span{
+    font-weight: bold;
+}
+
+#pingola{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.buttons-btn{
+    height: 50px;
+    width: 100px;
+    background-color: rgb(236, 236, 236);
+    font-size: 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    transition: all, 0.5s;
+}
+
+.buttons-btn:hover{
+    background-color: rgb(180, 180, 180);
+    border-radius: 20px;
+}

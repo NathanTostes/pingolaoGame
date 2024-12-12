@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Pingolão - Pingola Rolou</title>
+    <link rel="stylesheet" href="../../public/styles/minigames/pingolaRolou.css">
+</head>
+<body>
+
+    <div id="container">
+        <h1>PingolaRolou</h1>
+        <p>Saldo atual: €<span id="balance">100</span></p>
+        <div class="game-area">
+            <div id="dice">🎲</div>
+            <div id="suspenseNumber">0</div>
+        </div>
+        <input type="number" id="betAmount" placeholder="Valor da aposta (€)" min="1" class="input">
+        <input type="number" id="guessNumber" placeholder="Escolha um número (1-6)" min="1" max="6" class="input">
+        <button class="button" onclick="playGame()" id="apostar">Apostar</button>
+        <p id="result"></p>
+
+        <button onclick="window.location.href='../hub.html'" class="voltar">Voltar</button>
+    </div>
+
+
+<script src="../../scripts/minigames/pingolaRolou.js"></script>
+</body>
+</html>

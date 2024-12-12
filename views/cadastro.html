@@ -40,10 +40,10 @@
             e.preventDefault();
             
             const nome = document.getElementById('nome').value;
-            const saldoInicial = 0.00; 
+            const saldoInicial = 0; 
 
             localStorage.setItem('playerName', nome);
-            localStorage.setItem('playerBalance', saldoInicial.toFixed(2));
+            localStorage.setItem('playerBalance', saldoInicial);
 
             window.location.href = 'hub.html';
         });
