@@ -1,0 +1,72 @@
+* {
+    font-family: "Rakkas", serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body { 
+    max-width: 600px; 
+    margin: 20px auto;
+    background-color: #332c2c;
+    text-align: center; 
+}
+
+input, button { 
+    margin: 10px; 
+    padding: 5px;
+    width: 200px; 
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 100px;
+    color: #e7dcdc;
+    font-size: 50px;
+}
+
+p{
+    color: #e7dcdc;
+}
+
+#container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameArea {
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    gap: 10px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.cell {
+    width: 90px;
+    height: 90px;
+    background-color: #794c29;
+    border: 2px solid #433a35;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cell.disabled {
+    background-color: #adb5bd;
+    cursor: not-allowed;
+}
+
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
