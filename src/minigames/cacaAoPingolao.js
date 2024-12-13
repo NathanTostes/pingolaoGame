@@ -6,11 +6,20 @@ let playerBalance = parseInt(localStorage.getItem('playerBalance'));
 const balanceElement = document.getElementById('balance');
 balanceElement.textContent = playerBalance;
 
+let betAmount = 1;
+
 let gameActive = false;
 let pingoloes = [];
 
+const finishButton = document.getElementById('finalizar');
+const betButton = document.getElementById('apostar');
+finishButton.disabled = true;
+
 function playGame() {
-    const betAmount = parseInt(document.getElementById('betAmount').value);
+    betButton.disabled = true;
+    finishButton.disabled = false;
+    gameActive = true;
+    betAmount = parseInt(document.getElementById('betAmount').value);
     if (!betAmount || betAmount < 1) {
         document.getElementById('result').innerText = "Insira um valor de aposta válido!";
         return;
@@ -24,7 +33,6 @@ function playGame() {
     playerBalance -= betAmount;
     updateBalance();
 
-    gameActive = true;
     document.getElementById('result').innerText = "Boa sorte!";
     generateGameBoard();
 }
@@ -52,13 +60,15 @@ function handleCellClick(index, cell) {
         cell.style.backgroundColor = '#dc3545';
         cell.innerHTML = '<img src="../../public/images/pingolaoRemoveBg.png" width="80px">';
         document.getElementById('result').innerText = "Você encontrou um Pingolão! Fim de jogo.";
-        gameActive = false;
+        finishGame();
         return;
     }
 
     cell.classList.add('disabled');
     cell.style.backgroundColor = '#0d6efd';
-    balance += 2;
+    cell.style.fontSize = '60px';
+    cell.innerHTML = '💸';
+    playerBalance += betAmount;
     updateBalance();
     document.getElementById('result').innerText = "Continue jogando!";
 }
@@ -66,4 +76,11 @@ function handleCellClick(index, cell) {
 function updateBalance() {
     localStorage.setItem('playerBalance', playerBalance); 
     document.getElementById('balance').innerText = playerBalance;
+}
+
+function finishGame() {
+    finishButton.disabled = true;
+    betButton.disabled = false;
+    gameActive = false;
+    document.getElementById('result').innerText = "Aposta Finalizada!";
 }
