@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo do Pingolão - Pingola Rolou</title>
-    <link rel="stylesheet" href="../../public/styles/minigames/pingolaRolou.css">
+    <link rel="stylesheet" href="../../public/styles/minigames/cacaAoPingolao.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+    <title>Caça ao Pingolão</title>
 </head>
 <body>
-
     <div id="container">
-        <h1>PingolaRolou</h1>
+        <h1>Caça ao Pingolão</h1>
         <p>Saldo atual: €<span id="balance">0</span></p>
-        <div class="game-area">
-            <div id="dice">🎲</div>
-            <div id="suspenseNumber">0</div>
+        <div id="gameArea">
         </div>
         <input type="number" id="betAmount" placeholder="Valor da aposta (€)" min="1" class="input">
-        <input type="number" id="guessNumber" placeholder="Escolha um número (1-6)" min="1" max="6" class="input">
         <button class="button" onclick="playGame()" id="apostar">Apostar</button>
+        <button class="button" onclick="finishGame()" id="finalizar">Finalizar Aposta</button>
         <p id="result"></p>
 
         <button onclick="window.location.href='../hub.html'" class="voltar">Voltar</button>
     </div>
-
-
-<script src="../../src/minigames/pingolaRolou.js"></script>
 </body>
+<script src="../../src/minigames/cacaAoPingolao.js"></script>
 </html>
