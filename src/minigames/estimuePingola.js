@@ -10,7 +10,7 @@ function initializeBalance() {
     if (savedBalance) {
         balance = Number(savedBalance);
     } else {
-        balance = 0; //
+        balance = 0; 
         localStorage.setItem('playerBalance', balance);
     }
     document.getElementById('balance').textContent = balance.toFixed(2);
@@ -41,7 +41,7 @@ function startGame() {
     document.getElementById('game-screen').style.display = 'block';
     document.getElementById('result-screen').style.display = 'none';
 
-    multiplier = 1;
+    multiplier = 0;
     gameSize = 10;
             
     crashPoint = Number((Math.random() * 5).toFixed(2));
@@ -77,9 +77,19 @@ function endGame(winnings) {
 
     updateBalance()
 
-    document.getElementById('final-multiplier').textContent = multiplier.toFixed(2);
-    document.getElementById('winnings').textContent = winnings.toFixed(2);
-    document.getElementById('balance').textContent = balance.toFixed(2);
+
+    if (winnings != 0) {
+        document.getElementById('final-multiplier').innerHTML = `Resultado: ${multiplier.toFixed(2)} x`
+        document.getElementById('winnings').innerHTML = `Ganhos: R$ ${winnings.toFixed(2)}`
+        document.getElementById('balance').innerHTML = balance.toFixed(2);
+    }else{
+        let text1 = document.getElementById('final-multiplier')
+        let text2 = document.getElementById('winnings')
+        text1.style.fontSize = '30px'
+        text1.innerHTML = 'Essa não!!'
+        text2.innerHTML = 'Você perdeu tudo!'
+    }
+
 }
 
 function resetGame() {
@@ -88,13 +98,13 @@ function resetGame() {
     document.getElementById('bet-amount').value = '';
            
     var crashSquare = document.getElementById('crash-square');
-    crashSquare.style.width = '10px';
+    // crashSquare.style.width = '10px';
     crashSquare.style.height = '10px';
 }
 
 function updateDisplay() {
     var crashSquare = document.getElementById('crash-square');
-    crashSquare.style.width = gameSize + 'px';
+    // crashSquare.style.width = gameSize + 'px';
     crashSquare.style.height = gameSize + 'px';
     document.getElementById('multiplier').textContent = multiplier.toFixed(2) + 'x';
 }
