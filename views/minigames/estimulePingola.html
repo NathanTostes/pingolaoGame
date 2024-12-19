@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Pingolão - Estimule o Pingolão</title>
+</head>
+<body>
+    
+
+    <div id="game-container">
+        <div id="betting-screen">
+            <h2>Estimule o Pingolão</h2>
+            <p>Saldo: R$ <span id="balance">0.00</span></p>
+            <input type="number" id="bet-amount" placeholder="Valor da aposta">
+            <button onclick="startGame()">Iniciar Jogo</button>
+        </div>
+
+        <div id="game-screen" style="display:none;">
+            <div id="crash-square" style="width:10px; height:10px;"></div>
+            <div id="multiplier">1.00x</div>
+            <button onclick="cashOut()">Cash Out</button>
+        </div>
+
+        <div id="result-screen" style="display:none;">
+            <p>Resultado: <span id="final-multiplier">0.00</span>x</p>
+            <p>Ganhos: R$ <span id="winnings">0.00</span></p>
+            <button onclick="resetGame()">Jogar Novamente</button>
+        </div>
+
+
+        <script src="../../src/minigames/estimuePingola.js"></script>
+</body>
+</html>
