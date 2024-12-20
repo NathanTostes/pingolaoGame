@@ -1,0 +1,55 @@
+* {
+    font-family: "Rakkas", serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body { 
+    max-width: 500px; 
+    margin: 20px auto; 
+    background-color: #332c2c;
+    text-align: center; 
+}
+
+input, button { 
+    margin: 10px; 
+    padding: 5px;
+    width: 200px; 
+    text-align: center;
+    font-size: 20px;
+}
+
+
+h2{
+    margin-bottom: 100px;
+    color: #e7dcdc;
+    font-size: 50px;
+}
+
+p{
+    color: #e7dcdc;
+}
+
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
+
+.containers{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#crash-square{
+    margin-left: 9px;
+    width: 200px;
+    height: 10px;
+    background-image: url(../../images/pingolao.jpg);
+    background-size: 200px;
+    border-radius: 15px;    
+}

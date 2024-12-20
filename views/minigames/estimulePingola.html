@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Pingolão - Estimule o Pingolão</title>
+    <link rel="stylesheet" href="../../public/styles/minigames/estimulePingola.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+    <div id="game-container" class="containers">
+        <div id="betting-screen">
+            <h2>Estimule o Pingolão</h2>
+            <p>Saldo: R$ <span id="balance">0.00</span></p>
+            <input type="text" id="bet-amount" placeholder="Valor da aposta">
+            <button onclick="startGame()">Iniciar Jogo</button>
+        </div>
+
+        <div id="game-screen" style="display:none;" class="containers">
+            <p id="multiplier">1.00x</p>
+            <button onclick="cashOut()">Cash Out</button>
+            <div id="crash-square"></div>
+        </div>
+
+        <div id="result-screen" style="display:none;" class="containers">
+            <p><span id="final-multiplier">0.00</span></p>
+            <p><span id="winnings">0.00</span></p>
+            <button onclick="resetGame()">Jogar Novamente</button>
+        </div>
+
+        <button onclick="window.location.href='../hub.html'" class="voltar">Voltar</button>
+
+        <script src="../../src/minigames/estimuePingola.js"></script>
+</body>
+</html>
