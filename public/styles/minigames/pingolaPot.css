@@ -1,0 +1,44 @@
+* {
+    font-family: "Rakkas", serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body { 
+    max-width: 600px; 
+    margin: 20px auto;
+    background-color: #332c2c;
+    text-align: center; 
+}
+
+input, button { 
+    margin: 10px; 
+    padding: 5px;
+    width: 200px; 
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 100px;
+    color: #e7dcdc;
+    font-size: 50px;
+}
+
+p{
+    color: #e7dcdc;
+}
+
+#container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
