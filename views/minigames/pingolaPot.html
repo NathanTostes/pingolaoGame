@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/styles/minigames/pingolaPot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+    <title>Jogo do Pingolão - PingolaPot</title>
+</head>
+<body>
+    <div id="container">
+        <h1>PingolaPot</h1>
+        <p>Saldo atual: €<span id="balance">0</span></p>
+        <div id="gameArea">
+        </div>
+        <input type="number" id="betAmount" placeholder="Valor da aposta (€)" min="1" class="input">
+        <button class="button" onclick="startJackpot()" id="bet">Apostar</button>
+        <p id="result"></p>
+        <button onclick="window.location.href='../hub.html'" class="voltar">Voltar</button>
+    </div>
+</body>
+<script src="../../src/minigames/pingolaPot.js"></script>
+</html>
