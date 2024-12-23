@@ -3,8 +3,7 @@ if (!localStorage.getItem('playerBalance')) {
 }
 
 let playerBalance = parseInt(localStorage.getItem('playerBalance'));
-const balanceElement = document.getElementById('balance');
-balanceElement.textContent = playerBalance;
+document.getElementById('balance').textContent = playerBalance;
 
 let betAmount = 1;
 
