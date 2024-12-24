@@ -5,7 +5,7 @@ if (!localStorage.getItem('playerBalance')) {
 let playerBalance = parseInt(localStorage.getItem('playerBalance'));
 document.getElementById('balance').textContent = playerBalance;
 
-const pingolaoImage = '<img src="/public/images/pingolaoRemoveBg.png">';
+const pingolaoImage = '<img src="../../public/images/pingolaoRemoveBg.png">';
 const faces = [pingolaoImage, '🍒', '💲', '🍆', '🗿', '🚀'];
 const backgroundColor = '#e7dcdc';
 const backgroundGradient = 'radial-gradient(circle, rgba(147,84,21,1) 0%, rgba(243,196,55,1) 100%, rgba(255,210,59,1) 100%)';
@@ -111,7 +111,7 @@ const startJackpot = () => {
 
     const interval = setInterval(setSlotFaces, 80);
     
-    delay(5000).then(() => {
+    delay(1500).then(() => {
         clearInterval(interval);
         const result = verifyResult(betValue);
         playerBalance += result;
