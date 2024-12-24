@@ -28,6 +28,12 @@ p{
     color: #e7dcdc;
 }
 
+img {
+    position: relative;
+    left: -1.2vw;
+    height: 29vh;
+}
+
 #container {
     height: 90vh;
     display: flex;
@@ -36,7 +42,25 @@ p{
     align-items: center;
 }
 
-.voltar{
+#gameArea {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slot {
+    font-size: 21vh;
+    text-align: center;
+    height: 30vh;
+    width: 25vh;
+    background-color: #e7dcdc;
+    border: 3px solid #957d4a;
+    border-radius: 10px;
+    margin: 0px 3px;
+}
+
+.voltar {
     position: absolute;
     top: 20px;
     left: 20px;
