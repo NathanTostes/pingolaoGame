@@ -22,10 +22,12 @@ function realizarTransacao() {
 
     if (operacao === 'depositar') {
         saldoAtual += valor;
+        localStorage.setItem('playerBalance', saldoAtual);
         alert(`Você depositou R$ ${valor.toFixed(2)}.`);
     } else if (operacao === 'sacar') {
         if (saldoAtual >= valor) {
             saldoAtual -= valor;
+            localStorage.setItem('playerBalance', saldoAtual);
             alert(`Você sacou R$ ${valor.toFixed(2)}.`);
         } else {
             alert("Saldo insuficiente.");

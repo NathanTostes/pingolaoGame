@@ -1,0 +1,68 @@
+* {
+    font-family: "Rakkas", serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body { 
+    max-width: 600px; 
+    margin: 20px auto;
+    background-color: #332c2c;
+    text-align: center; 
+}
+
+input, button { 
+    margin: 10px; 
+    padding: 5px;
+    width: 200px; 
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 100px;
+    color: #e7dcdc;
+    font-size: 50px;
+}
+
+p{
+    color: #e7dcdc;
+}
+
+img {
+    position: relative;
+    left: -1.2vw;
+    height: 29vh;
+}
+
+#container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameArea {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slot {
+    font-size: 21vh;
+    text-align: center;
+    height: 30vh;
+    width: 25vh;
+    background-color: #e7dcdc;
+    border: 3px solid #957d4a;
+    border-radius: 10px;
+    margin: 0px 3px;
+}
+
+.voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
