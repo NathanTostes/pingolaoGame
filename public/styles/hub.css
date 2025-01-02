@@ -77,12 +77,22 @@ p{
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
-    float: right;
+    margin-left: 375px ;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
+.buttonModal{
+    background-color: #fefefe;
+    color: black;
+    padding: 1px;
+    border: #332c2c solid 1px;
 }
