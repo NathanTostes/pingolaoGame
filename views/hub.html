@@ -16,9 +16,15 @@
             <p>Olá <span id="nomeJogador"></span>, você tem <span id="saldoJogador"></span> para gastar.</p>
         </div>
 
-        <div id="buttons">
-            <button onclick="abrirModal('modalFinancas')" class="buttons-btn">Finanças</button>
-            <button onclick="abrirModal('modalJogos')" class="buttons-btn">Jogos</button>
+        <div id="options">
+            <div class="option" onclick="abrirModal('modalFinancas')">
+                <img class="optionImage" src="../public/images/greenMoney.jpg">
+                <h2>Finanças</h2>
+            </div>
+            <div class="option" onclick="abrirModal('modalJogos')">
+                <img class="optionImage" src="../public/images/grayJoystick.png">
+                <h2>Jogos</h2>
+            </div>
         </div>
 
         <img src="../public/images/pingolaoRemoveBg.png" alt="Pingolao" id="pingola">
@@ -35,26 +41,40 @@
                     <option value="depositar">Depositar</option>
                     <option value="sacar">Sacar</option>
                 </select>
+                <br>
                 <label for="valor">Valor:</label>
                 <select id="valor">
                     <option value="10.00">R$ 10,00</option>
                     <option value="50.00">R$ 50,00</option>
                     <option value="100.00">R$ 100,00</option>
                 </select>
+                <br>
                 <button type="button" onclick="realizarTransacao()" class="buttonModal">Confirmar</button>
             </form>
         </div>
     </div>
 
     <div id="modalJogos" class="modal">
-        <div class="modal-content">
+        <div id="modalJogos-content" class="modal-content">
             <span class="close" onclick="fecharModal('modalJogos')">&times;</span>
-            <h2>Escolha seu Minijogo</h2>
+            <h2>Escolha um Minijogo</h2>
             <div id="minijogos-buttons">
-                <button onclick="window.location.href='./minigames/pingolaRolou.html'" class="buttonModal">PingolaRolou</button>
-                <button onclick="window.location.href='./minigames/cacaAoPingolao.html'" class="buttonModal">Caça ao Pingolão</button>
-                <button onclick="window.location.href='./minigames/estimulePingola.html'" class="buttonModal">Estimule o Pingolão</button>
-                <button onclick="window.location.href='./minigames/pingolaPot.html'" class="buttonModal">PingolaPot</button>
+                <div onclick="window.location.href='./minigames/pingolaRolou.html'" class="buttonModal buttonModalJogos">
+                    <img class="imagemJogo" src="../public/images/pingolaoRolou.jpg">
+                    <h2>Pingolão Rolou</h2>
+                </div>
+                <div onclick="window.location.href='./minigames/cacaAoPingolao.html'" class="buttonModal buttonModalJogos">
+                    <img class="imagemJogo" src="../public/images/cacaAoPingolao.png">
+                    <h2>Caça ao Pingolão</h2>
+                </div>
+                <div onclick="window.location.href='./minigames/estimulePingola.html'" class="buttonModal buttonModalJogos">
+                    <img class="imagemJogo" src="../public/images/pingolao.jpg">
+                    <h2>Estimule o Pingolão</h2>
+                </div>
+                <div onclick="window.location.href='./minigames/pingolaPot.html'" class="buttonModal buttonModalJogos">
+                    <img class="imagemJogo" src="../public/images/pingolaPot.png">
+                    <h2>PingolaPot</h2>
+                </div>
             </div>
         </div>
     </div>
