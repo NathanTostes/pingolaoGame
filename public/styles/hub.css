@@ -1,28 +1,30 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
+    font-family: "Rakkas", serif;
+    font-weight: 500;
 }
 
 body {
     background-color: #332c2c;
 }
 
-p{
+p {
     color: #e7dcdc;
-    
+
 }
 
-#welcome{
+#welcome {
     position: absolute;
     top: 30px;
     left: 30px;
 }
 
-#welcome>p>span{
+#welcome>p>span {
     font-weight: bold;
 }
 
-#pingola{
+#pingola {
     position: absolute;
     top: 30px;
     right: 30px;
@@ -30,25 +32,43 @@ p{
     height: 100px;
 }
 
-#buttons{
+#options {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.buttons-btn{
+#minijogos-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.option {
+    background-color: #e8e8e8;
+    margin-left: 50px;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.optionImage {
+    border-radius: 15px 10px 0px 0px;
+    height: 600px;
+    width: 400px;
+}
+
+.buttons-btn {
     height: 50px;
     width: 100px;
     background-color: rgb(236, 236, 236);
-    font-size: 15px;
     margin: 10px;
     border: none;
     border-radius: 10px;
     transition: all, 0.5s;
 }
 
-.buttons-btn:hover{
+.buttons-btn:hover {
     background-color: rgb(180, 180, 180);
     border-radius: 20px;
 }
@@ -66,16 +86,35 @@ p{
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    border-radius: 10px;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 400px;
+    min-width: 400px;
+    max-width: fit-content;
+}
+
+.modal-content > h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.modal-content > form > label {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.modal-content > form > button, select {
+    margin: 10px 4px 10px 0px;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 15px;
 }
 
 .close {
-    color: #aaa;
-    font-size: 28px;
+    color: #aaaaaa;
+    font-size: 40px;
     font-weight: bold;
     float: right;
 }
@@ -85,4 +124,31 @@ p{
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+.buttonModal {
+    padding: 1px;
+    border: #332c2c solid 1px;
+    background-color: #fefefe;
+    color: black;
+}
+
+.buttonModalJogos {
+    margin: 0px 20px 0px 0px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.buttonModalJogos > h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.imagemJogo {
+    height: 400px;
+    width: 240px;
 }
