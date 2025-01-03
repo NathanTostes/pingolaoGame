@@ -1,7 +1,8 @@
 * {
-    font-family: "Rakkas", serif;
     margin: 0px;
     padding: 0px;
+    font-family: "Rakkas", serif;
+    font-weight: 500;
 }
 
 body { 
