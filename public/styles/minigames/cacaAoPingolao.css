@@ -20,7 +20,7 @@ input, button {
 }
 
 h1{
-    margin-bottom: 100px;
+    margin-bottom: 25px;
     color: #e7dcdc;
     font-size: 50px;
 }
@@ -70,4 +70,5 @@ p{
     top: 20px;
     left: 20px;
     width: 100px;
+    border-radius: 10px;
 }
